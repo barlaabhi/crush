@@ -1,14 +1,5 @@
 <h2 align="center"> Crush (Crack Your Hash) </h2>
 
-![Build Status](https://travis-ci.com/relarizky/crush.svg?branch=main)
-![Code Size](https://img.shields.io/github/languages/code-size/relarizky/crush?color=brightgreen)
-![Repo Size](https://img.shields.io/github/repo-size/relarizky/crush?color=brightgreen)
-![Language](https://img.shields.io/github/languages/top/relarizky/crush?color=brightgreen)
-![Github Star](https://img.shields.io/github/stars/relarizky/crush?style=social)
-![Github Fork](https://img.shields.io/github/forks/relarizky/crush?style=social)
-
-<img src="https://raw.githubusercontent.com/relarizky/crush/main/screenshot/help.png" height=30% width=30% alt="help"> <img src="https://raw.githubusercontent.com/relarizky/crush/main/screenshot/brute.png" height=30% width=30% alt="brute force"> <img src="https://raw.githubusercontent.com/relarizky/crush/main/screenshot/dict.png" height=30% width=30% alt="dictionary attack">
-
 <i>Crush</i> is a simple python script for cracking hash
 
 ## Supported hash

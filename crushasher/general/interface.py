@@ -11,12 +11,12 @@ from functools import wraps
 def default_banner(function):
     @wraps(function)
     def banner(*args, **kwargs):
-        print("  _____                _")
-        print(" / ____|              | |")
-        print("| |     _ __ _   _ ___| |__")
-        print("| |    | '__| | | / __| '_ \\")
-        print("| |____| |  | |_| \\__ \\ | | |")
-        print(" \\_____|_|   \\__,_|___/_| |_|")
-        print("            [Crack Your Hash]\n")
+        # print("  _____                _")
+        # print(" / ____|              | |")
+        # print("| |     _ __ _   _ ___| |__")
+        # print("| |    | '__| | | / __| '_ \\")
+        # print("| |____| |  | |_| \\__ \\ | | |")
+        # print(" \\_____|_|   \\__,_|___/_| |_|")
+        print("[*] Crush")
         return function(*args, **kwargs)
     return banner

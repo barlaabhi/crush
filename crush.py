@@ -18,10 +18,10 @@ def main(hash, word_list=None, length=None, **technique):
     type = HashIdentifier(hash)
 
     if str(type) == "unknown":
-        print("[-] We can't identify your hash type.")
+        print("[-] Cannot identify hash type.")
         os._exit(1)
 
-    print("[+] Your hash identified as : {}".format(type))
+    print("[+] Hash type: {}".format(type))
     if "dict_attack" in technique and technique["dict_attack"] is True:
         with DictionaryAttack(str(type), hash, word_list) as dictionary_attack:
             dictionary_attack.crack()

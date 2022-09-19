@@ -35,12 +35,12 @@ class DictionaryAttack:
             if type is KeyboardInterrupt:
                 print("[-] You exited this program!")
             elif type is SuccessfullyCracked:
-                print("[+] Done in %.2f seconds" % (time.time()-self._start_time))
-                print("[+] The hash has successfully cracked!")
+                #print("[+] Done in %.2f seconds" % (time.time()-self._start_time))
+                print("[+] Hash cracked!")
             else:
                 print("[-] Program exited due to some error, {}".format(type))
         else:
-            print("[-] Sorry, we can't find the result:(")
+            print("[-] Nope")
 
         return True
 
@@ -50,7 +50,7 @@ class DictionaryAttack:
     def _compare(self, string: str) -> bool:
         hash_string = HashGenerator(self.type, string)
         if self.hash == str(hash_string):
-            return "[+] Your result is : {}".format(string)
+            return "[+] Result: {}".format(string)
 
     def crack(self):
         word_list = read_word_list(self.word_list)
@@ -65,7 +65,7 @@ class BruteForce(DictionaryAttack):
 
     # Private Attribute
     # This attribute implies the number of created string
-    __string_created = 0
+    #__string_created = 0
 
     # Private Attribute
     # This attribute implies the minimum of string length
@@ -81,12 +81,12 @@ class BruteForce(DictionaryAttack):
     def crack(self):
         characters = "abcdefghijklmnopqrstuvwxyz0123456789"
         for repeat in range(self.__min_length, self.length+1):
-            print("[+] Brute Forcing with {} length string".format(str(repeat)))
+            #print("[+] Brute Forcing with {} length string".format(str(repeat)))
             for word in itertools.product(characters, repeat=repeat):
                 word = "".join(str(char) for char in word).strip()
                 brute = self._compare(word)
                 if brute is not None:
                     print(brute)
-                    print("[+] {} strings created".format(str(self.__string_created)))
+                    #print("[+] {} strings created".format(str(self.__string_created)))
                     raise SuccessfullyCracked
-                self.__string_created += 1
+                #self.__string_created += 1
